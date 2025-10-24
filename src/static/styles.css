@@ -79,8 +79,9 @@ section h3 {
 }
 
 .participants-list {
-  list-style: disc;
-  margin: 8px 0 0 20px;
+  /* hide default bullets and left margin so items look like chips */
+  list-style: none;
+  margin: 8px 0 0 0;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -95,6 +96,23 @@ section h3 {
   padding: 6px 8px;
   border-radius: 6px;
   border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+/* Delete (trash) button shown next to each participant */
+.delete-participant {
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  color: #c62828; /* red-ish */
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.delete-participant:hover {
+  background: rgba(198, 40, 40, 0.08);
 }
 
 .participant-avatar {
